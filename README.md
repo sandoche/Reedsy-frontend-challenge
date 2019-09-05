@@ -44,6 +44,12 @@ Thanks to Asynchronous programming it's possible not too block the UI in a webap
 ### 3. Styling
 Find the styling assignement in the [`q3_styling` folder](./q3_styling/)
 
+#### Notes
+* I took as an hypothesis that I couldn't change the class names of change any of the HTML otherwise I would have use the BEM naming convention
+* The build command does not minify
+* The build command does not add the browser prefixes
+* I developped it and tested on a chromium based browser
+
 ### 4. SPA
 Find the SPA assignement in the [`q4_spa/client` folder](./q4_spa/client), note that you need to run the [server](./q4_spa/server) in order to have the API running.
 
