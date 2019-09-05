@@ -24,7 +24,7 @@ Tell us about one of your commercial projects with Vue.js or AngularJS.
 
 Given the HTML file **front-end/q3/q3.html**, implement the styling so the page matches the image below.
 
-![Styling](./docs/result.jpg "Styling")
+![Styling](./result.jpg "Styling")
 
 #### Bonus
 - Implement styling rules that consider different screen sizes.
@@ -46,14 +46,14 @@ Display all available books returned from the API.
 - Book's title and cover should link to the book's individual page.
 - Though the upvote functionality is not required, the upvote state should be represented.
 
-![Books list](./docs/books-list.png "Books list")
+![Books list](./books-list.png "Books list")
 
 
 ### Book page
 
 Display a single book information, highlighting the cover and displaying the full synopsis.
 
-![Book page](./docs/book.png "Book page")
+![Book page](./book.png "Book page")
 
 The upvote functionality is **not** required, the UI should only reflect if a book has been upvoted yet or not.
 For this question, you **don't** have to replicate the example screens above, feel free to implement any design that you'd like.
