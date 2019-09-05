@@ -1,0 +1,45 @@
+// CSS Variables
+:root {
+  --font-lg: 40px;
+  --font-md: 32px;
+  --font-xxs: 15px;
+
+
+  @media (max-width: 768px) {
+    --font-lg: 24px;
+    --font-md: 20px;
+    --font-xxs: 13px;
+  }
+}
+
+// Sizes
+$container-width: 960px;
+$container-padding: 32px;
+$size-border-radius: 3px;
+
+// Colors
+$color-yellow: #e7c200;
+$color-beige: #faf9f4;
+$color-grey: #ccc;
+$color-dark: #363533;
+$color-very-dark: #292929;
+
+// Colors semantic
+$color-primary: $color-yellow;
+$color-branding: $color-grey;
+$color-background: $color-beige;
+$color-link: $color-very-dark;
+$color-title: $color-dark;
+$color-text: $color-very-dark;
+$color-white: #fff;
+
+// Text-size variables
+$font-lg: var(--font-lg);
+$font-md: var(--font-md);
+$font-xxs: var(--font-xxs);
+
+// Breakpoints
+$breakpoint-xs: 576px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 992px;
+$breakpoint-lg: 1200px;

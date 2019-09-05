@@ -1,0 +1,18 @@
+{
+  "name": "q3-styling",
+  "version": "1.0.0",
+  "description": "Challenge for Reedsy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"browser-sync . -w\" \"sass --watch _scss:styles\"",
+    "build": "sass _scss:styles"
+  },
+  "author": "Sandoche Adittane",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "sass": "^1.23.0-module.beta.1",
+    "concurrently": "^4.1.2"
+  }
+}
