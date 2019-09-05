@@ -46,6 +46,7 @@ Find the styling assignement in the [`q3_styling` folder](./q3_styling/)
 
 #### Notes
 * I took as an hypothesis that I couldn't change the class names of change any of the HTML otherwise I would have use the BEM naming convention
+* I only added the following html code `<meta name="viewport" content="width=device-width, initial-scale=1.0"/>` and `<link href="styles/app.css" rel="stylesheet">`
 * The build command does not minify
 * The build command does not add the browser prefixes
 * I developped it and tested on a chromium based browser
