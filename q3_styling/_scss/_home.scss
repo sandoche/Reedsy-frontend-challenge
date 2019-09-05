@@ -60,6 +60,7 @@
   grid-row-gap: 16px;
   padding-bottom: 32px;
   padding-left: 32px;
+  margin-bottom: 64px;
 
   .recommended {
     grid-column-start: 2;
@@ -86,16 +87,7 @@
   }
 
   .title {
-    font-weight: 900;
     margin-bottom: 0;
-  }
-
-  .author {
-
-  }
-
-  .synopsis {
-
   }
 }
 
@@ -104,31 +96,73 @@
 }
 
 .books-list {
-
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 32px;
+  margin-bottom: 64px;
 }
 
 .book {
-  .position {
+  background-color: $color-background;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
 
+  img {
+    width: 50%;
+    margin-left: 35px;
+    box-shadow: 0px 5px 10px -5px rgba(0,0,0,0.6);
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+
+  .position {
+    float: right;
+    color: $color-primary;
+    border: 2px solid $color-primary;
+    border-radius: 17px;
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 0px;
   }
 
   .book-info {
-    
+    text-align: left;
+    font-size: $font-xxs;
   }
 
   .title {
-
+    font-weight: 900;
+    font-size: $font-xxs;
   }
 
-  .author {
-
-  }
-
-  .synopsis {
-
-  }
 }
 
 footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: $color-very-dark;
 
+  ul {
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin: auto;
+    padding: 16px 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    color: $color-white;
+  }
 }
