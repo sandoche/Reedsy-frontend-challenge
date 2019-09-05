@@ -1,0 +1,6 @@
+.container {
+  @include container($container-padding, $container-width);
+  @media (max-width: 720px) {
+    padding: 0 16px;
+  }
+}

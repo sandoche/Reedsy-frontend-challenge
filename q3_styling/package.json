@@ -12,9 +12,7 @@
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.26.7",
-    "sass": "^1.23.0-module.beta.1"
-  },
-  "dependencies": {
+    "sass": "^1.23.0-module.beta.1",
     "concurrently": "^4.1.2"
   }
 }
