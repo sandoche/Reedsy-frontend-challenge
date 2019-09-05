@@ -51,39 +51,32 @@
 }
 
 .featured-book {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-rows: auto auto;
   background-color: $color-background;
-  margin: 0 -32px;
-  grid-column-gap: 16px;
-  grid-row-gap: 16px;
-  padding-bottom: 32px;
-  padding-left: 32px;
-  margin-bottom: 64px;
+  margin: 32px -32px;
+  overflow: hidden;
+
 
   .recommended {
     grid-column-start: 2;
-    text-align: right;
     background-color: $color-primary;
-    width: calc(20% + 4px);
     border-radius: 0 0 0 5px;
-    justify-self: end;
     padding: 4px;
     color: $color-white;
     font-size: $font-xxs;
     text-align: center;
+    float: right;
   }
 
   img {
     border-radius: 8px;
-    object-fit: cover;
     box-shadow: 0px 5px 10px -5px rgba(0,0,0,0.6);
-    width: 100%;
+    width: 30%;
+    float: left;
+    margin: 32px;
   }
 
   .book-info {
-    padding-right: 32px;
+    padding: 32px 32px 32px 0;
   }
 
   .title {
