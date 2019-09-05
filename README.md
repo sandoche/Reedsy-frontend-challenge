@@ -18,19 +18,28 @@ My favourites projects are Undesign (very simple, but very useful), GitNews (web
 ### 2. General
 
 #### 2.1. What kind of front end projects do you enjoy working on? Why?
-todo
+I enjoy to work on front end projects when:
+- I like the technology / framework used: I started frontend with AngularJS, I loved it, then I tried React I didn't like it but I liked the component based architecture, and then went back for the good old VanillaJS whenever it was possible before discovering VueJS. I fell in love with VueJS. I enjoy projects when I enjoy the tech otherwise I suffer :)
+- There is a bit of novelty / technical challenge: I want to do things that I know how to do but also new thing to feel that I progress, I need to learn new way of doing, new tools, and have a bit of difficulty to feel like my brain is functionning!
+- The project is answering a real need or if it already have users. Otherwise it feels useless. When I was in IBM we spent 9 month on a project that they never released (and that was pretty useless), just another news agregator. It was very boring, luckily I was mainly working on another AngularJS project.
+- I can also touch other thing that just the frontend: eventually work on the UX/UI design or the backend.
 
 #### 2.2. Which are your favorite features of HTML5? How have you used them before?
-todo
+My favorites features of HTML5 are the new form types that works very well with mobile browser, and the semantic tags.
+I use semantic tags in all my web projects, and the form types whenever there are forms! Also I think the coolest feature is HTML Canvas but I never had the chance to use it. I would like actually to use it to make generative art in one of my future side projects.
 
 #### 2.3. Explain the difference between creating a DOM element setting `innerHTML` and using `createElement`.
-todo
+When you create a DOM element with `innerHTML` the browser has to re-parse and regenerate all the nodes inside the node where innerHTML has been edited whereas `createElement` will avoid this problem and let the browser only add the right node when added to the DOM. Also, I think that using `createElement` makes it easier to debug.
 
 #### 2.4. Compare two-way data binding vs one-way data flow.
-todo
+- Two way data binding will bind the component's variable with the template using observers, it allows the template to update automatically when the variable changes, and to change the value of the variable when the value is changed on the template (using an input for example).
+- One way data flow will only let you update the component's variable when an event is thrown but if the variable is programmatically changed it will be reflected to the template thanks to an observer.
+
+Two way data building is commonly used with Angular, AngularJS and VueJS where as the one-way data flow is commonly used with React. 
 
 #### 2.5. Why is asynchronous programming important in JavaScript?
-todo
+Asynchronous programming is important in JavaScript because it does not support multi threading.
+Thanks to Asynchronous programming it's possible not too block the UI in a webapp.
 
 ### 3. Styling
 Find the styling assignement in the [`q3_styling` folder](./q3_styling/)
