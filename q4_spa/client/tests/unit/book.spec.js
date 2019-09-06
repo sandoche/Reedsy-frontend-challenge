@@ -14,13 +14,14 @@ const goodBook =     {
   upvotes: 1111
 }
 
+var wrapper
 describe('Book.vue', () => {
 
-  it('Renders book\'s title', () => {
+  beforeEach(() => {
     const route = bookRoute(goodBook.slug)
     store.state.book.book = fetchBook(goodBook.slug)
 
-    const wrapper = mount(Book, {
+    wrapper = mount(Book, {
       store,
       mocks: {
         $route: route,
@@ -28,87 +29,30 @@ describe('Book.vue', () => {
       },
       stubs: ['router-link'],
     })
+  })
 
+
+  it('Renders book\'s title', () => {
     expect(wrapper.html()).toContain(goodBook.title)
   })
 
   it('Renders book\'s author', () => {   
-    const route = bookRoute(goodBook.slug)
-    store.state.book.book = fetchBook(goodBook.slug)
-
-    const wrapper = mount(Book, {
-      store,
-      mocks: {
-        $route: route,
-        $t: () => {}
-      },
-      stubs: ['router-link'],
-    })
-
     expect(wrapper.html()).toContain(goodBook.author)
   })
 
   it('Renders book\'s synopsis', () => {   
-    const route = bookRoute(goodBook.slug)
-    store.state.book.book = fetchBook(goodBook.slug)
-
-    const wrapper = mount(Book, {
-      store,
-      mocks: {
-        $route: route,
-        $t: () => {}
-      },
-      stubs: ['router-link'],
-    })
-
     expect(wrapper.html()).toContain(goodBook.synopsis)
   })
 
   it('Renders book\'s rating', () => {   
-    const route = bookRoute(goodBook.slug)
-    store.state.book.book = fetchBook(goodBook.slug)
-
-    const wrapper = mount(Book, {
-      store,
-      mocks: {
-        $route: route,
-        $t: () => {}
-      },
-      stubs: ['router-link'],
-    })
-
     expect(wrapper.html()).toContain(goodBook.rating)
   })
 
   it('Renders book\'s upvotes', () => {   
-    const route = bookRoute(goodBook.slug)
-    store.state.book.book = fetchBook(goodBook.slug)
-
-    const wrapper = mount(Book, {
-      store,
-      mocks: {
-        $route: route,
-        $t: () => {}
-      },
-      stubs: ['router-link'],
-    })
-
     expect(wrapper.html()).toContain(goodBook.upvotes)
   })
 
   it('Renders book\'s cover', () => {   
-    const route = bookRoute(goodBook.slug)
-    store.state.book.book = fetchBook(goodBook.slug)
-
-    const wrapper = mount(Book, {
-      store,
-      mocks: {
-        $route: route,
-        $t: () => {}
-      },
-      stubs: ['router-link'],
-    })
-
     expect(wrapper.html()).toContain(goodBook.cover)
   })
 
