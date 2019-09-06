@@ -3,18 +3,25 @@ import Book from '../../src/views/Book.vue'
 import store from '../../src/store/index'
 import fetchBook from './mock/fetchBook'
 
-const goodBook = {
-  slug: 'in-search-of-lost-time',
-  title: 'In Search of Lost Time'
+const goodBook =     {
+  author: "Marcel Proust",
+  cover: "01.jpg",
+  rating: "9.9",
+  slug: "in-search-of-lost-time",
+  synopsis: "In Search of Lost Time, also translated as Remembrance of Things Past, novel in seven parts by Marcel Proust, published in French as À la recherche du temps perdu from 1913 to 1927. The novel is the story of Proust's own life, told as an allegorical search for truth.\nIn Search of Lost Time, also translated as Remembrance of Things Past, novel in seven parts by Marcel Proust, published in French as À la recherche du temps perdu from 1913 to 1927. The novel is the story of Proust's own life, told as an allegorical search for truth.",
+  title: "In Search of Lost Time",
+  upvoted: false,
+  upvotes: 1111
 }
 
+var wrapper
 describe('Book.vue', () => {
 
-  it('Renders book\'s title', () => {
+  beforeEach(() => {
     const route = bookRoute(goodBook.slug)
     store.state.book.book = fetchBook(goodBook.slug)
 
-    const wrapper = mount(Book, {
+    wrapper = mount(Book, {
       store,
       mocks: {
         $route: route,
@@ -22,9 +29,33 @@ describe('Book.vue', () => {
       },
       stubs: ['router-link'],
     })
+  })
 
+
+  it('Renders book\'s title', () => {
     expect(wrapper.html()).toContain(goodBook.title)
   })
+
+  it('Renders book\'s author', () => {   
+    expect(wrapper.html()).toContain(goodBook.author)
+  })
+
+  it('Renders book\'s synopsis', () => {   
+    expect(wrapper.html()).toContain(goodBook.synopsis)
+  })
+
+  it('Renders book\'s rating', () => {   
+    expect(wrapper.html()).toContain(goodBook.rating)
+  })
+
+  it('Renders book\'s upvotes', () => {   
+    expect(wrapper.html()).toContain(goodBook.upvotes)
+  })
+
+  it('Renders book\'s cover', () => {   
+    expect(wrapper.html()).toContain(goodBook.cover)
+  })
+
 })
 
 const bookRoute = (slug) => ({
