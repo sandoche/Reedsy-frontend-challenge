@@ -15,6 +15,7 @@
         :rating="book.rating"
         :upvoted="book.upvoted"
         :upvotes="book.upvotes"
+        class="book__review"
       >
       </base-book-review>
       <div class="book__synopsis">
@@ -71,6 +72,10 @@ export default {
     background: $primary-color;
     padding-top: 32px;
 
+    @media (max-width: $breakpoint-xs) {
+      height: 25vh;
+    }
+
     a {
       color: #fff;
       font-size: $font-md;
@@ -84,13 +89,26 @@ export default {
     }
   }
 
+  &__title {
+    font-size: $font-md;
+  }
+
   &__section {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 180px 3fr 1fr;
     grid-gap: 32px;
     margin-top: -15vh;
     justify-content: flex-end;
     align-items: flex-end;
+
+    @media (max-width: $breakpoint-sm) {
+      grid-template-columns: 180px 3fr;
+    }
+
+    @media (max-width: $breakpoint-xs) {
+      margin-top: -5vh;
+      grid-template-columns: 90px 3fr;
+    }
   }
 
   &__image {
@@ -101,6 +119,18 @@ export default {
   &__synopsis {
     grid-column-start: 2;
     grid-column-end: 4;
+
+    @media (max-width: $breakpoint-sm) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  }
+
+  &__review {
+    @media (max-width: $breakpoint-sm) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
   }
 }
 </style>
