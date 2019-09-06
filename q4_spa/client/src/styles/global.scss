@@ -1,5 +1,9 @@
 @import 'variables.scss';
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   color: $color-black;
   font-family: $font-family-default;

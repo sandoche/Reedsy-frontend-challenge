@@ -1,5 +1,6 @@
 <template>
   <main class="books container">
+    <input type="text" v-model="filter" @keydown="filterResults(filter)" :placeholder="$t('books.filter')" class="books__filter">
     <h1 class="books__title">{{ $t("books.title") }}<span class="accent">.</span></h1>
     <books-loader v-if="loading"></books-loader>
     <div class="books__list" v-if="!loading">
@@ -31,12 +32,18 @@ export default {
     BooksListItem,
     BooksLoader
   },
+  data () {
+    return {
+      filter: ''
+    }
+  },
   created () {
     this.retrieve()
   },
   methods: {
     ...mapActions({
-      retrieve: 'books/retrieve'
+      retrieve: 'books/retrieve',
+      filterResults: 'books/filterResults'
     })
   },
   computed: {
@@ -59,6 +66,17 @@ export default {
     margin-top: 128px;
     margin-bottom: 96px;
     font-weight: 900;
+  }
+
+  &__filter {
+    padding: 8px;
+    float: right;
+    margin-top: 16px;
+
+    @media (max-width: $breakpoint-sm) {
+      float: none;
+      width: 100%;
+    }
   }
 }
 </style>
