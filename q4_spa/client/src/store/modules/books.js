@@ -35,7 +35,7 @@ const actions = {
     fetchBooks()
       .then(response => response.json())
       .then(response => {
-        commit(success(response))
+        commit(success(response.books))
         commit(loading(false))
       })
       .catch(e => {

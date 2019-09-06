@@ -1,14 +1,33 @@
 <template>
-  <main>
+  <main class="books container">
     <h1>{{ $t("books.title") }}</h1>
+    <div class="books__list" v-if="!loading">
+      <books-list-item
+        v-for="(book, index) in books"
+        :key="index"
+        :author="book.author"
+        :cover="book.cover"
+        :rating="book.rating"
+        :slug="book.slug"
+        :synopsis="book.synopsis"
+        :title="book.title"
+        :upvoted="book.upvoted"
+        :upvotes="book.upvotes"
+      >
+      </books-list-item>
+    </div>
   </main>
 </template>
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
+import BooksListItem from '../components/BooksListItem.vue'
 
 export default {
   name: 'Books',
+  components: {
+    BooksListItem
+  },
   created () {
     this.retrieve()
   },
@@ -28,5 +47,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+@import '../styles/variables.scss';
+@import '../styles/shared.scss';
 </style>
