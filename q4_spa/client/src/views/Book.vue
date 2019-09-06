@@ -1,7 +1,7 @@
 <template>
   <main class="book container">
     <nav>
-      <router-link :to="{ name: 'books'}">< Back</router-link>
+      <router-link :to="{ name: 'books'}">← Back</router-link>
     </nav>
     <header>
       <img :src="book.cover" :alt="`${book.title} ${$t('books.cover_alt')}`" class="book__image"/>

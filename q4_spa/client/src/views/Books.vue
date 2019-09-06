@@ -1,6 +1,6 @@
 <template>
   <main class="books container">
-    <h1>{{ $t("books.title") }}</h1>
+    <h1 class="books__title">{{ $t("books.title") }}<span class="accent">.</span></h1>
     <div class="books__list" v-if="!loading">
       <books-list-item
         v-for="(book, index) in books"
@@ -49,4 +49,17 @@ export default {
 <style lang="scss" scoped>
 @import '../styles/variables.scss';
 @import '../styles/shared.scss';
+
+.books {
+  &__title {
+    font-size: $font-lg;
+    margin-top: 128px;
+    margin-bottom: 96px;
+    font-weight: 900;
+  }
+}
+
+.accent {
+  color: $primary-color;
+}
 </style>

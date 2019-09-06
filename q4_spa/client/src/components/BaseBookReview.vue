@@ -5,7 +5,7 @@
       <span v-if="upvoted">{{ $t('reviews.upvoted') }} - {{ upvotes }}</span>
     </button>
     <p class="base-book-rewiew__rating">
-      <span 
+      <span
         v-for="index in parseInt(rating)"
         :key="index"
         class="base-book-rewiew__stars"

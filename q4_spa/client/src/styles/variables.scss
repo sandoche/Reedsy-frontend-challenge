@@ -1,0 +1,48 @@
+// CSS Variables
+:root {
+  --font-lg: 52px;
+  --font-md: 32px;
+  --font-sm: 18px;
+  --font-xs: 16px;
+  --font-xxs: 15px;
+
+
+  @media (max-width: 768px) {
+    --font-lg: 24px;
+    --font-md: 20px;
+    --font-sm: 18px;
+    --font-xs: 16px;
+    --font-xxs: 13px;
+  }
+}
+
+// Colors
+$color-purple: #5a51fe;
+$color-black: #222;
+$color-grey: #777;
+$color-light-grey: #eee;
+
+// Colors semantic
+$primary-color: $color-purple;
+$text-color: $color-black;
+$links-color: $color-purple;
+$light-color: $color-grey;
+$very-light-color: $color-light-grey;
+
+// Fonts family
+$system-font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+$font-family-default: $system-font-family;
+$font-family-titles: $system-font-family;
+
+// Text-size variables
+$font-lg: var(--font-lg);
+$font-md: var(--font-md);
+$font-sm: var(--font-sm);
+$font-xs: var(--font-xs);
+$font-xxs: var(--font-xxs);
+
+// Breakpoints
+$breakpoint-xs: 576px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 992px;
+$breakpoint-lg: 1200px;

@@ -1,0 +1,17 @@
+@import 'variables.scss';
+
+body {
+  color: $color-black;
+  font-family: $font-family-default;
+  font-size: $font-sm;
+}
+
+a, a:visited {
+  color: $primary-color;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  font-family: $font-family-titles;
+}
