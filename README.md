@@ -2,7 +2,7 @@
 A repository containing my answers to the frontend engineer challenge by Reedsy
 
 ## Instructions
-Find the [instructions here](./docs/INSTRUCTIONS.md)
+Find the [instructions here](./docs/INSTRUCTIONS.md).
 
 ## Answers
 
@@ -42,7 +42,7 @@ Asynchronous programming is important in JavaScript because it does not support 
 Thanks to Asynchronous programming it's possible not too block the UI in a webapp.
 
 ### 3. Styling
-Find the styling assignement in the [`q3_styling` folder](./q3_styling/)
+Find the styling assignement in the [`q3_styling` folder](./q3_styling/).
 
 #### Notes
 * I took as an hypothesis that I couldn't change the class names of change any of the HTML otherwise I would have use the BEM naming convention
