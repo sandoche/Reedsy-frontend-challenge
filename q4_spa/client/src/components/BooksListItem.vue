@@ -84,7 +84,7 @@ export default {
 
 .books-list-item {
   display: grid;
-  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-columns: 1fr 3fr 1fr;
   grid-gap: 32px;
   padding-bottom: 42px;
   margin-bottom: 42px;

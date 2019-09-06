@@ -4,6 +4,7 @@ body {
   color: $color-black;
   font-family: $font-family-default;
   font-size: $font-sm;
+  border-top: 8px solid $primary-color;
 }
 
 a, a:visited {
