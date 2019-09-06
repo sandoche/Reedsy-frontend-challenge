@@ -24,13 +24,24 @@ function loading (loading) {
 }
 
 const getters = {
+  books: state => state.books,
   error: state => state.error,
-  loading: state => state.loading,
-  books: state => state.books
+  loading: state => state.loading
 }
 
 const actions = {
   retrieve ({ commit }, data) {
+    commit(loading(true))
+    fetchBooks()
+      .then(response => response.json())
+      .then(response => {
+        commit(success(response))
+        commit(loading(false))
+      })
+      .catch(e => {
+        commit(error(e))
+        commit(loading(false))
+      })
   }
 }
 

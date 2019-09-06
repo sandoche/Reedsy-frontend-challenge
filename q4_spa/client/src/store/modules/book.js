@@ -35,7 +35,18 @@ const getters = {
 }
 
 const actions = {
-  retrieve ({ commit }, data) {
+  retrieve ({ commit }, slug) {
+    commit(loading(true))
+    fetchBook(slug)
+      .then(response => response.json())
+      .then(response => {
+        commit(success(response))
+        commit(loading(false))
+      })
+      .catch(e => {
+        commit(error(e))
+        commit(loading(false))
+      })
   },
   reset ({ commit }) {
     commit(reset())
