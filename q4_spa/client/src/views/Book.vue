@@ -11,13 +11,13 @@
         <h1 class="book__title">{{ book.title }}</h1>
         <p class="book__author">{{ book.author }}</p>
       </div>
-      <!-- <base-book-review
+      <base-book-review
         :rating="book.rating"
         :upvoted="book.upvoted"
         :upvotes="book.upvotes"
         class="book__review"
       >
-      </base-book-review> -->
+      </base-book-review>
       <div class="book__synopsis">
         <h2>{{ $t('book.synopsis') }}</h2>
         <p>
