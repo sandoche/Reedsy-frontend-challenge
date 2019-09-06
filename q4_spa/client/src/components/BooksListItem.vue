@@ -19,6 +19,7 @@
       :rating="rating"
       :upvoted="upvoted"
       :upvotes="upvotes"
+      class="books-list-item__review"
     >
     </base-book-review>
   </article>
@@ -115,6 +116,14 @@ export default {
   margin-bottom: 42px;
   border-bottom: 1px solid $very-light-color;
 
+  @media (max-width: $breakpoint-sm) {
+    grid-template-columns: 2fr 4fr;
+  }
+
+  @media (max-width: $breakpoint-xs) {
+    grid-template-columns: 1fr;
+  }
+
   &__text {
     display: flex;
     flex-direction: column;
@@ -153,6 +162,18 @@ export default {
 
     &:hover {
       transform: translateX(10px) translateY(0) translateZ(0);
+    }
+  }
+
+  &__review {
+    @media (max-width: $breakpoint-sm) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    @media (max-width: $breakpoint-xs) {
+      grid-column-start: 1;
+      grid-column-end: 2;
     }
   }
 }

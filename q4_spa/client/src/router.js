@@ -19,9 +19,9 @@ export default new Router({
       name: 'book',
       component: () => import(/* webpackChunkName: "about" */ './views/Book.vue')
     },
-    { 
-      path: '*', 
-      component: NotFound 
+    {
+      path: '*',
+      component: NotFound
     }
   ]
 })
