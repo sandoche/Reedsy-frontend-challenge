@@ -1,9 +1,10 @@
+import fetchBook from '../../services/fetchBook'
 import {
   BOOK_SHOW_SUCCESS,
   BOOK_SHOW_ERROR,
   BOOK_SHOW_LOADING,
   BOOK_SHOW_RESET
-} from '@/store/mutation-types'
+} from '../../store/mutation-types'
 
 const state = {
   book: {},
