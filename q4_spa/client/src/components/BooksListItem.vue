@@ -85,7 +85,7 @@ export default {
       const book = {
         author: this.author,
         cover: this.cover,
-        rating: this.ratin,
+        rating: this.rating,
         slug: this.slug,
         synopsis: this.synopsis,
         title: this.title,
