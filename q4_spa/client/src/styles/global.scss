@@ -1,0 +1,23 @@
+@import 'variables.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: $color-black;
+  font-family: $font-family-default;
+  font-size: $font-sm;
+  border-top: 8px solid $primary-color;
+}
+
+a, a:visited {
+  color: $primary-color;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  font-family: $font-family-titles;
+}

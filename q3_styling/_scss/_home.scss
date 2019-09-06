@@ -9,7 +9,7 @@
     justify-content: space-between;
     padding: 16px 32px;
 
-    @media (max-width: 768px) {
+    @media (max-width: $breakpoint-sm) {
       flex-direction: column;
     }
   }
@@ -21,7 +21,7 @@
   padding: 8px 64px;
   text-align: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: $breakpoint-sm) {
     margin-bottom: 16px;
   }
 }
@@ -41,7 +41,7 @@
     padding: 8px 12px;
     margin-left: 12px;
 
-    @media (max-width: 768px) {
+    @media (max-width: $breakpoint-sm) {
       margin: auto;
     }
   }
@@ -93,7 +93,7 @@
   .book-info {
     padding: 32px 32px 32px 0;
 
-    @media (max-width: 768px) {
+    @media (max-width: $breakpoint-sm) {
       padding-left: 32px;
     }
   }
@@ -110,7 +110,7 @@
   margin-bottom: 64px;
 
   
-  @media (max-width: 768px) {
+  @media (max-width: $breakpoint-sm) {
     grid-template-columns: 1fr;
   }
 }
@@ -121,7 +121,7 @@
   border-radius: 8px;
   text-align: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: $breakpoint-sm) {
     margin-bottom: 32px;
   }
 
@@ -174,7 +174,7 @@ footer {
     margin: auto;
     padding: 16px 0;
 
-    @media (max-width: 768px) {
+    @media (max-width: $breakpoint-sm) {
       width: 100%;
     }
   }
