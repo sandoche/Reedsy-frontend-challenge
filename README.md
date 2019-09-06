@@ -1,5 +1,5 @@
 # Reedsy-frontend-challenge
-A repository containing my answers to the frontend engineer challenge by Reedsy
+A repository containing my answers to the frontend engineer challenge by Reedsy.
 
 ## Instructions
 Find the [instructions here](./docs/INSTRUCTIONS.md).
