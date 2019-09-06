@@ -1,6 +1,7 @@
 <template>
   <main class="books container">
     <h1 class="books__title">{{ $t("books.title") }}<span class="accent">.</span></h1>
+    <books-loader v-if="loading"></books-loader>
     <div class="books__list" v-if="!loading">
       <books-list-item
         v-for="(book, index) in books"
@@ -22,11 +23,13 @@
 <script>
 import { mapGetters, mapActions } from 'vuex'
 import BooksListItem from '../components/BooksListItem.vue'
+import BooksLoader from '../components/BooksLoader.vue'
 
 export default {
   name: 'Books',
   components: {
-    BooksListItem
+    BooksListItem,
+    BooksLoader
   },
   created () {
     this.retrieve()
