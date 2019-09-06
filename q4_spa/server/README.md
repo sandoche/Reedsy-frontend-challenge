@@ -1,8 +1,5 @@
 # Server
 
-In order to solve this problem, a simple server is provided, which you should use to get the data.
-Head into `front-end/q4/server` and install the server dependencies using:
-
 ```bash
 yarn install
 ```
