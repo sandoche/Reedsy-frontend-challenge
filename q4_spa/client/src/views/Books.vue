@@ -1,6 +1,6 @@
 <template>
   <main>
-    {{ books }}
+    <h1>{{ $t("books.title") }}</h1>
   </main>
 </template>
 
