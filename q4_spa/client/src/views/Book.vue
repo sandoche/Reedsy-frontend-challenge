@@ -5,7 +5,7 @@
         <router-link :to="{ name: 'books'}">← Back</router-link>
       </div>
     </nav>
-    <section class="book__section container">
+    <section class="book__section container" v-if="book.title || (error !== '' && loading)">
       <img :src="book.cover" :alt="`${book.title} ${$t('books.cover_alt')}`" class="book__image"/>
       <div>
         <h1 class="book__title">{{ book.title }}</h1>
@@ -24,19 +24,25 @@
         </p>
       </div>
     </section>
+    <section v-else-if="error !== ''">
+      <not-found/>
+    </section>
   </main>
 </template>
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
 import BaseBookReview from '../components/BaseBookReview.vue'
+import NotFound from './NotFound.vue'
 
 export default {
   name: 'Book',
   components: {
-    BaseBookReview
+    BaseBookReview,
+    NotFound
   },
   created () {
+    this.reset()
     this.retrieve(this.$route.params.slug)
   },
   methods: {

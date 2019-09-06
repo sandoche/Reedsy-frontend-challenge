@@ -45,8 +45,12 @@ const actions = {
     fetchBook(slug)
       .then(response => response.json())
       .then(response => {
-        commit(success(response))
         commit(loading(false))
+        if (response.statusCode !== 404) {
+          commit(success(response))
+        } else {
+          commit(error(response.message))
+        }
       })
       .catch(e => {
         commit(error(e))
@@ -75,7 +79,6 @@ const mutations = {
     state.book = payload.book
   },
   [BOOK_SHOW_RESET] (state, payload) {
-    state.book = {}
     state.error = ''
     state.loading = false
   }
