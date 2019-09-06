@@ -116,6 +116,10 @@ export default {
   margin-bottom: 42px;
   border-bottom: 1px solid $very-light-color;
 
+  &:last-of-type {
+    border-bottom: none;
+  }
+
   @media (max-width: $breakpoint-sm) {
     grid-template-columns: 2fr 4fr;
   }
