@@ -61,8 +61,4 @@ export default {
     font-weight: 900;
   }
 }
-
-.accent {
-  color: $primary-color;
-}
 </style>
