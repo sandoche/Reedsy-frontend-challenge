@@ -3,7 +3,8 @@ import {
   BOOK_SHOW_SUCCESS,
   BOOK_SHOW_ERROR,
   BOOK_SHOW_LOADING,
-  BOOK_SHOW_RESET
+  BOOK_SHOW_RESET,
+  BOOK_PRELOAD_SUCCESS
 } from '../../store/mutation-types'
 
 const state = {
@@ -14,6 +15,10 @@ const state = {
 
 function success (book) {
   return { type: BOOK_SHOW_SUCCESS, book }
+}
+
+function preload (book) {
+  return { type: BOOK_PRELOAD_SUCCESS, book }
 }
 
 function error (error) {
@@ -48,6 +53,9 @@ const actions = {
         commit(loading(false))
       })
   },
+  preload ({ commit }, book) {
+    commit(preload(book))
+  },
   reset ({ commit }) {
     commit(reset())
   }
@@ -62,6 +70,9 @@ const mutations = {
   },
   [BOOK_SHOW_LOADING] (state, payload) {
     state.loading = payload.loading
+  },
+  [BOOK_PRELOAD_SUCCESS] (state, payload) {
+    state.book = payload.book
   },
   [BOOK_SHOW_RESET] (state, payload) {
     state.book = {}

@@ -37,7 +37,6 @@ export default {
     BaseBookReview
   },
   created () {
-    this.reset()
     this.retrieve(this.$route.params.slug)
   },
   methods: {

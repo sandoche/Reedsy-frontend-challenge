@@ -1,19 +1,19 @@
 <template>
   <article class="books-list-item">
-    <router-link :to="{ name: 'book', params: { slug }}">
+    <a @click="preloadAndOpenDetails()">
       <img :src="cover" :alt="`${title} ${$t('books.cover_alt')}`" class="books-list-item__image"/>
-    </router-link>
+    </a>
     <div class="books-list-item__text">
       <div>
-        <router-link :to="{ name: 'book', params: { slug }}">
+        <a @click="preloadAndOpenDetails()">
           <h2 class="books-list-item__title">{{ title }}</h2>
-        </router-link>
+        </a>
         <p class="books-list-item__author">{{ author }}</p>
         <p class="books-list-item__synopsis">{{ synopsis | truncate(200) }}</p>
       </div>
-      <router-link :to="{ name: 'book', params: { slug }}" class="books-list-item__more">
+      <a @click="preloadAndOpenDetails()" class="books-list-item__more">
         Read More →
-      </router-link>
+      </a>
     </div>
     <base-book-review
       :rating="rating"
@@ -25,6 +25,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 import BaseBookReview from './BaseBookReview.vue'
 
 export default {
@@ -74,6 +75,30 @@ export default {
       } else {
         return value
       }
+    }
+  },
+  methods: {
+    ...mapActions({
+      preload: 'book/preload'
+    }),
+    preloadAndOpenDetails () {
+      const book = {
+        author: this.author,
+        cover: this.cover,
+        rating: this.ratin,
+        slug: this.slug,
+        synopsis: this.synopsis,
+        title: this.title,
+        upvoted: this.upvoted,
+        upvotes: this.upvotes
+      }
+      this.preload(book)
+      this.$router.push({
+        name: 'book',
+        params: {
+          slug: this.slug
+        }
+      })
     }
   }
 }
